@@ -2,6 +2,9 @@ import java.util.*;
 
 class Student {
 
+    // Staic Variable , Shared variable 
+    int count;
+    // Non Static variables, 
     private String Name;
     private int RollNo;
     float Marks;
@@ -70,20 +73,23 @@ class Student {
 
         Scanner input=new Scanner(System.in);
 
-        System.out.println("Enter Name : ");
+        System.out.print("Enter Name : ");
         String SName=input.nextLine();
 
-        System.out.println("Enter RollNO : ");
+        System.out.print("Enter RollNO : ");
         int SRollNo=input.nextInt();
 
-        System.out.println("Enter Marks : ");
+        System.out.print("Enter Marks : ");
         float SMarks=input.nextFloat();
 
-        System.out.println("Enter Standard : ");
+        System.out.print("Enter Standard : ");
         int SStandard=input.nextInt();
 
         Student s4 = new Student( SName , SRollNo ,SMarks,SStandard );
         System.out.println(s4);
+
+        s4.setName(SName= "Jui");
+        System.out.println(s4.getName("Changed Name after using getter setter in input : "+ SName));
 
     }
 }
