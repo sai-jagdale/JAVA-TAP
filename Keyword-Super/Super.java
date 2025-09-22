@@ -1,21 +1,21 @@
-class Animal{
-    private int legs;
+class Animal{    // class animal created it is not main class
+    int legs;
     String habitat;
     String type;
 
-    public Animal(){
+    public Animal(){      // consrtuctor for animal
         legs = 4;
         habitat = "Land";
         type="Carnivorous";
     }
 
-    public Animal(int legs , String habitat , String type){
+    public Animal(int legs , String habitat , String type){     // constructor for animal
         this.legs=legs;
         this.habitat=habitat;
         this.type=type;
     }
 
-    public void setlegs(int legs){
+    public void setlegs(int legs){        // getter setter since we need to get the legs in another class using super keyword
         this.legs=legs;
     }
     public int getlegs(){
@@ -27,22 +27,22 @@ class Animal{
         return ("Legs : "+legs+" "+"Habitat : "+habitat+" "+"Type : "+type);
     }
 
-    public void walk(){
-        System.out.println("Animals walk on 4 legs.");
+    public void walk(){     // walk function in animal class
+        System.out.println("Animals walk on 4 legs.");  
     }
 }
 
 class Dog extends Animal{
 
-    public void DogWalk(){
+    public void DogWalk(){   // dogwalk function in animal class
         System.out.println("Dog also walk on 4 legs");
     }
 
-    public void AnimalWalk(){
+    public void AnimalWalk(){  // animalwalk function , using super keyword animal class function walk is called
         super.walk();
     }
 
-    public void DogAnimalWalk(){
+    public void DogAnimalWalk(){    // to get the no. legs from animal class used super keyword and getter to get the value
         int getlegs = super.getlegs();
         System.out.println("Legs of dog : "+getlegs);
     }
